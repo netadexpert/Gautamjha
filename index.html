@@ -32,10 +32,9 @@ src="https://www.facebook.com/tr?id=1648895206959890&ev=PageView&noscript=1"
         }
 
         body {
-            background: #080a10;
+            background: #0b0f19;
             background-image: 
-                radial-gradient(circle at 10% 20%, rgba(0, 136, 204, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.15) 0%, transparent 40%);
+                radial-gradient(circle at 50% 0%, rgba(0, 136, 204, 0.12) 0%, transparent 60%);
             color: #ffffff;
             min-height: 100vh;
             display: flex;
@@ -47,41 +46,23 @@ src="https://www.facebook.com/tr?id=1648895206959890&ev=PageView&noscript=1"
         .container {
             width: 100%;
             max-width: 400px;
-            background: rgba(18, 22, 35, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 30px;
-            padding: 30px 24px;
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 28px 20px;
             text-align: center;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Glowing top border accent */
-        .container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #0088cc, #22c55e, #0088cc);
-            background-size: 200% auto;
-            animation: shimmer 3s linear infinite;
-        }
-
-        @keyframes shimmer {
-            0% { background-position: 0% center; }
-            100% { background-position: 200% center; }
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
 
         .profile-glow {
-            position: relative;
-            width: 120px;
-            height: 120px;
-            margin: 0 auto 20px;
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, #0088cc, #22c55e);
         }
 
         .avatar {
@@ -89,62 +70,48 @@ src="https://www.facebook.com/tr?id=1648895206959890&ev=PageView&noscript=1"
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #22c55e;
-            box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
+            background-color: #1f2937;
         }
 
         h1 {
-            font-size: 20px;
+            font-size: 19px;
             font-weight: 700;
             color: #ffffff;
             margin-bottom: 6px;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.3px;
         }
 
         .badge-exp {
             display: inline-block;
-            background: rgba(34, 197, 94, 0.12);
+            background: rgba(34, 197, 94, 0.1);
             color: #4ade80;
-            padding: 6px 14px;
+            padding: 5px 12px;
             border-radius: 20px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 600;
-            margin-bottom: 24px;
-            border: 1px solid rgba(34, 197, 94, 0.3);
+            margin-bottom: 20px;
+            border: 1px solid rgba(34, 197, 94, 0.25);
         }
 
         .cta-button {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             background: linear-gradient(135deg, #0088cc 0%, #00aaff 100%);
             color: #ffffff;
             text-decoration: none;
-            padding: 16px 20px;
-            border-radius: 16px;
+            padding: 15px 20px;
+            border-radius: 14px;
             font-weight: 700;
-            font-size: 16px;
-            box-shadow: 0 10px 25px rgba(0, 136, 204, 0.4);
-            transition: all 0.3s ease;
-            margin-bottom: 20px;
+            font-size: 15px;
+            box-shadow: 0 8px 20px rgba(0, 136, 204, 0.35);
+            transition: all 0.2s ease;
+            margin-bottom: 18px;
         }
 
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(0, 136, 204, 0.6);
-        }
-
-        .guarantee-box {
-            background: rgba(56, 189, 248, 0.08);
-            border: 1px dashed rgba(56, 189, 248, 0.3);
-            border-radius: 12px;
-            padding: 10px;
-            color: #38bdf8;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: 0.3px;
+        .cta-button:active {
+            transform: scale(0.98);
         }
 
         .features-list {
@@ -152,16 +119,17 @@ src="https://www.facebook.com/tr?id=1648895206959890&ev=PageView&noscript=1"
             display: flex;
             flex-direction: column;
             gap: 10px;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             background: rgba(255, 255, 255, 0.02);
-            padding: 14px;
-            border-radius: 14px;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
         }
 
         .feature-row {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             font-size: 13px;
             color: #cbd5e1;
         }
@@ -172,8 +140,8 @@ src="https://www.facebook.com/tr?id=1648895206959890&ev=PageView&noscript=1"
         }
 
         .hindi-text {
-            font-size: 14px;
-            color: #f87171;
+            font-size: 13px;
+            color: #e2e8f0;
             font-weight: 600;
             margin-bottom: 4px;
         }
@@ -184,15 +152,23 @@ src="https://www.facebook.com/tr?id=1648895206959890&ev=PageView&noscript=1"
             margin-bottom: 15px;
         }
 
-        .timer-wrapper {
-            font-size: 12px;
+        /* Compliance Safe Disclaimer (Crucial for Ad Approval) */
+        .disclaimer {
+            font-size: 10px;
             color: #64748b;
+            line-height: 1.3;
+            margin-bottom: 15px;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 12px;
+            padding-top: 10px;
+        }
+
+        .timer-wrapper {
+            font-size: 11px;
+            color: #94a3b8;
         }
 
         #countdown {
-            color: #22c55e;
+            color: #4ade80;
             font-weight: 700;
         }
     </style>
@@ -200,37 +176,36 @@ src="https://www.facebook.com/tr?id=1648895206959890&ev=PageView&noscript=1"
 <body>
 
     <div class="container">
-        <!-- Profile Image -->
+        <!-- Profile Image from your URL -->
         <div class="profile-glow">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" alt="Gautam Kumar Jha" class="avatar"[cite: 1]>
+            <img src="https://telegram-ads.riyazshaikh.com/wp-content/uploads/2026/07/gautm.jpg" alt="Gautam Kumar Jha" class="avatar">
         </div>
 
         <!-- Name & Experience -->
-        <h1>GAUTAM KUMAR JHA OFFICIAL 💵🏆</h1>
-        <div class="badge-exp">📊 Experience of 27 years ✨</div>
+        <h1>GAUTAM KUMAR JHA OFFICIAL</h1>
+        <div class="badge-exp">📊 Market Learning & Analytics</div>
 
         <!-- Telegram CTA Button with Link -->
         <a href="https://t.me/+3OHMKcCN4eQzNDk1" class="cta-button" id="tgLink">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.943z"/></svg>
-            JOIN TELEGRAM NOW
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.14.14-.26.26-.534.26l.213-3.053 5.56-5.023c.242-.213-.054-.334-.373-.121l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.832.943z"/></svg>
+            JOIN TELEGRAM CHANNEL
         </a>
-
-        <!-- Guarantee -->
-        <div class="guarantee-box">
-            💎 DAILY PROFIT GURANTEE 💎
-        </div>
 
         <!-- Features -->
         <div class="features-list">
-            <div class="feature-row"><span>📊</span> Live Daily Trades – From my portfolio to yours!</div>
-            <div class="feature-row"><span>🔥</span> Exclusive Signals – Get the same trades I take!</div>
-            <div class="feature-row"><span>💯</span> High Accuracy – Consistent proven strategy!</div>
-            <div class="feature-row"><span>💡</span> Real-Time Updates – Instant market alerts!</div>
+            <div class="feature-row"><span>📈</span> Market Analysis – Educational insights & updates</div>
+            <div class="feature-row"><span>🔔</span> Instant Alerts – Real-time community updates</div>
+            <div class="feature-row"><span>🤝</span> Community Learning – Connect with peers</div>
         </div>
 
         <!-- Hindi Text Prompts -->
-        <div class="hindi-text">क्या आप ट्रेडिंग से पैसे कमाना चाहते हैं?</div>
-        <div class="hindi-subtext">अगर हां तो दिए गए टेलीग्राम बटन पर दबाएं !</div>
+        <div class="hindi-text">क्या आप शेयर बाजार और ट्रेडिंग सीखना चाहते हैं?</div>
+        <div class="hindi-subtext">अगर हां, तो दिए गए टेलीग्राम बटन पर क्लिक करें।</div>
+
+        <!-- Safe Disclaimer for Ad Networks -->
+        <div class="disclaimer">
+            Disclaimer: Educational content purposes only. Market investments are subject to market risks. We do not guarantee assured returns.
+        </div>
 
         <!-- Auto Redirect Timer -->
         <div class="timer-wrapper">
